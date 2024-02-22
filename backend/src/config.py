@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from src.exceptions import CriticalException
+from src.server.exceptions import CriticalException
 
 
 class Config:

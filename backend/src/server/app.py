@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 
 from src.config import init_config
-from src.logger import get_logger, init_loggers
+from src.server.logger import get_logger, init_loggers
 
 
 @asynccontextmanager

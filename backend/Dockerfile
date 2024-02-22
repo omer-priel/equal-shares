@@ -13,4 +13,4 @@ COPY src /app/src
 
 EXPOSE 8000
 
-ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "--reload", "src.app:app"]
+ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "--reload", "src.server.app:app"]

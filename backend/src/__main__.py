@@ -1,6 +1,6 @@
 import uvicorn
 
-from src.app import app
+from src.server.app import app
 
 
 def main() -> None:
