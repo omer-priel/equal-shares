@@ -29,6 +29,9 @@ cd solutrain
 conda env create -f environment.yml
 conda activate equal-shares
 
+cd backend
+poetry install
+
 docker-compose up --build
 ```
 
