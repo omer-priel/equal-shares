@@ -7,7 +7,7 @@ from fastapi.responses import RedirectResponse
 
 from pydantic import BaseModel
 
-from src.config import init_config
+from src.server.config import init_config
 from src.server.logger import get_logger, init_loggers
 from src.server.admin import admin
 
@@ -93,3 +93,15 @@ def vote(body: VoteBodySchema) -> dict:
     return {
         "status": "ok",
     }
+
+
+class ReportDataSchema(BaseModel):
+    pass
+
+
+@app.get("/get-report-data")
+def get_report_data(admin_key: UUID) -> ReportDataSchema:
+    if admin.admin_key != admin_key:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+
+    return ReportDataSchema()

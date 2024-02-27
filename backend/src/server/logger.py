@@ -2,7 +2,7 @@ import logging
 import logging.config
 from logging.config import dictConfig
 
-from src.config import config
+from src.server.config import config
 
 
 def init_loggers() -> None:
