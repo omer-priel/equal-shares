@@ -1,0 +1,10 @@
+black==23.12.1
+fastapi==0.104.1
+flake8==6.1.0
+isort==5.13.2
+mypy==1.8.0
+psycopg==3.1.17
+psycopg-binary==3.1.17
+psycopg-pool==3.2.1
+pytest==7.4.4
+uvicorn==0.23.2
