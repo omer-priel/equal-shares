@@ -24,7 +24,7 @@ Run the following commands to install:
 
 ```bash
 git clone git@github.com:omer-priel/equal-shares.git
-cd solutrain
+cd equal-shares
 
 conda env create -f environment.yml
 conda activate equal-shares
