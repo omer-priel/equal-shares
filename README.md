@@ -1,4 +1,4 @@
-# SoluTrain
+# equal-shares
 
 ## Requirements
 
@@ -17,6 +17,7 @@
 * docker compose - For local development
 * React - As framework for the frontend
 * TypeScript - As programming language for the frontend
+* Vite - As build tool for the frontend
 
 ## Installation and Getting Started
 
@@ -55,10 +56,16 @@ Table of the optional environment variables for the backend:
 | PG_PORT  | PostgresSQL port | 5432    |
 
 
+## Links
+
+* [ca-frontend](https://github.com/ariel-research/cap-frontend)
+  Original frontend
+* [ca-backend](https://github.com/ariel-research/cap-backend)
+  Original backend
+* [equalshares.net](https://equalshares.net/)
+* [Final-Project](https://github.com/ElhaiMansbach/Final-Project)
+  For the algorithm of equal shares
+
 ## License
 
 MIT
-
-## Author
-
-* Omer Priel - [GitHub](http://www.github.com/omer-priel)
