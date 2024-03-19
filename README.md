@@ -59,12 +59,12 @@ Table of the optional environment variables for the backend:
 ## Links
 
 * [ca-frontend](https://github.com/ariel-research/cap-frontend)
-  Original frontend
+  Original frontend - React
 * [ca-backend](https://github.com/ariel-research/cap-backend)
-  Original backend
+  Original backend - Django
 * [equalshares.net](https://equalshares.net/)
 * [Final-Project](https://github.com/ElhaiMansbach/Final-Project)
-  For the algorithm of equal shares
+  For the algorithm of equal shares - Flask and React
 
 ## License
 
