@@ -1,35 +1,6 @@
 version: '3.7'
 
 services:
-  cap-frontend:
-    build:
-      context: ./cap-frontend
-      dockerfile: ../cap-frontend.Dockerfile
-    depends_on:
-      - cap-backend
-    ports:
-      - "3000:3000"
-
-  cap-backend:
-    build:
-      context: ./cap-backend
-      dockerfile: ../cap-backend.Dockerfile
-    depends_on:
-      - db
-    ports:
-      - "8000:8000"
-    entrypoint: ["python", "manage.py", "runserver"]
-
-  cap-backend-service:
-    build:
-      context: ./cap-backend
-      dockerfile: ../cap-backend.Dockerfile
-    depends_on:
-      - db
-    ports:
-      - "8000:8000"
-    entrypoint: ["sleep", "infinity"]
-
   db:
     image: mysql:8.0
 
