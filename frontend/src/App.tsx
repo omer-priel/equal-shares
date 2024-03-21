@@ -6,6 +6,8 @@ import RegisterPage from './components/RegisterPage';
 import ForgotPasswordPage from './components/ForgotPasswordPage';
 import LoginPage from './components/LoginPage';
 import MainPage from './components/MainPage';
+import AboutPage from './components/AboutPage';
+import Footer from './components/Footer';
 
 import './App.css'
 
@@ -14,6 +16,7 @@ export default function App() {
 
   const [user, setUser] = useState<UserData | null>(null);
   const [currentPage, setCurrentPage] = useState<Page>(Page.Register);
+  const [aboutPageShowd, setAboutPageShowd] = useState<boolean>(false);
 
   const logout = () => {
     setUser(null);
@@ -22,14 +25,17 @@ export default function App() {
 
   return (
     <div>
-      {user === null ? (
-      <>
-        {currentPage === Page.Register && (<RegisterPage setCurrentPage={setCurrentPage} />)}
-        {currentPage === Page.ForgotPassword && (<ForgotPasswordPage setCurrentPage={setCurrentPage} />)}
-        {currentPage === Page.Login && (<LoginPage setCurrentPage={setCurrentPage} setUser={setUser} />)}
-      </>) : (<>
-        {currentPage === Page.Main && (<MainPage logout={logout} user={user} />)}
+      {aboutPageShowd ? <AboutPage /> : (<>
+        {user === null ? (
+        <>
+          {currentPage === Page.Register && (<RegisterPage setCurrentPage={setCurrentPage} />)}
+          {currentPage === Page.ForgotPassword && (<ForgotPasswordPage setCurrentPage={setCurrentPage} />)}
+          {currentPage === Page.Login && (<LoginPage setCurrentPage={setCurrentPage} setUser={setUser} />)}
+        </>) : (<>
+          {currentPage === Page.Main && (<MainPage logout={logout} user={user} />)}
+        </>)}
       </>)}
+      <Footer aboutPageShowd={aboutPageShowd} setAboutPageShowd={setAboutPageShowd} />
     </div>
   )
 }
