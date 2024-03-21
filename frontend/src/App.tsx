@@ -9,13 +9,10 @@ import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
 import Footer from './components/Footer';
 
-import './App.css'
-
-
 export default function App() {
 
   const [user, setUser] = useState<UserData | null>(null);
-  const [currentPage, setCurrentPage] = useState<Page>(Page.Register);
+  const [currentPage, setCurrentPage] = useState<Page>(Page.Login);
   const [aboutPageShowd, setAboutPageShowd] = useState<boolean>(false);
 
   const logout = () => {

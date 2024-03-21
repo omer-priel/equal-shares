@@ -1,6 +1,5 @@
 # IDE
 .idea
-.vscode
 
 # python
 __pycache__

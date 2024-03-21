@@ -12,6 +12,8 @@ COPY tsconfig.json /app/
 COPY tsconfig.node.json /app/
 COPY tsconfig.json /app/
 COPY vite.config.ts /app/
+COPY postcss.config.js /app/
+COPY tailwind.config.js /app/
 
 COPY public /app/public
 COPY src /app/src

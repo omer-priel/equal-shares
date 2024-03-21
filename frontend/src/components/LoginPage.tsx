@@ -29,10 +29,10 @@ export default function LoginPage({ setCurrentPage, setUser }: Props) {
 
     return (
         <div className="login">
-            <div className="login-container w-100 m-auto">
-                <form>
-                    <img className="mb-4 center" src={logoImage} width="75" height="65" />
-                    <h1 className="h3 mb-3 fw-normal text-center">התחברו ודרגו!</h1>
+            <div className="container w-100 m-auto">
+                <div>
+                    <img className="login-logo mb-4" src={logoImage} width="75" height="65" />
+                    <h1 className="h3 mb-3 font-normal text-center">התחברו ודרגו!</h1>
 
                     {message && <span>
                         <div className="alert alert-danger d-flex align-items-center" role="alert">
@@ -42,7 +42,7 @@ export default function LoginPage({ setCurrentPage, setUser }: Props) {
                     <label className='form-label d-flex text-right mb-1'>אימייל</label>
                     <input
                         type="email"
-                        className="form-control left"
+                        className="form-control direction-ltr"
                         placeholder="name@example.ariel.ac.il"
                         value={username}
                         onChange={evt => setUsername(evt.target.value)}
@@ -50,7 +50,7 @@ export default function LoginPage({ setCurrentPage, setUser }: Props) {
                     <label className='form-label d-flex text-right mt-2 mb-1'>סיסמא</label>
                     <input
                         type="password"
-                        className="form-control left"
+                        className="form-control direction-ltr"
                         placeholder="Password"
                         value={password}
                         onChange={evt => setPassword(evt.target.value)}
@@ -62,7 +62,7 @@ export default function LoginPage({ setCurrentPage, setUser }: Props) {
                             <u>איפוס הסיסמא</u>
                         </button>
                     </div>
-                </form>
+                </div>
                 <p className="text-center text-muted mt-5 mb-0">עדיין לא נרשמת?
                     <button className="fw-bold text-body" onClick={() => setCurrentPage(Page.Register)}>
                         <u>הרשמה כאן!</u>
