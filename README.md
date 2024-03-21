@@ -58,6 +58,7 @@ Table of the optional environment variables for the backend:
 
 ## Links
 
+* [ca website](https://faircourse.csariel.xyz/)
 * [ca-frontend](https://github.com/ariel-research/cap-frontend)
   Original frontend - React
 * [ca-backend](https://github.com/ariel-research/cap-backend)
