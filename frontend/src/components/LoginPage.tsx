@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Container, TextField, Button, Typography } from '@mui/material';
 
 import { Page, UserData } from "../types";
@@ -22,8 +20,16 @@ export default function LoginPage({ setCurrentPage, setUser }: Props) {
         setCurrentPage(Page.Main);
     }
 
+    const forgotPasswordOnClick = () => {
+        setCurrentPage(Page.ForgotPassword);
+    }
+
+    const registerOnClick = () => {
+        setCurrentPage(Page.Register);
+    }
+
     return (
-        <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs">
         <div className="w-full h-[300px] flex justify-center">
             <img className="w-[150px] h-[150px] my-[75px]" src={logoImage} alt="Logo" width={150} height={150} />
         </div>
@@ -50,12 +56,12 @@ export default function LoginPage({ setCurrentPage, setUser }: Props) {
           <Button color="primary" variant="contained" className="mt-[20px]" fullWidth onClick={loginOnClick}>
             Login
           </Button>
-          <Button color="primary" variant="text">
+          <Button color="primary" variant="text" onClick={forgotPasswordOnClick}>
             Forgot password?
           </Button>
           <br />
           Don't have an account?
-          <Button color="primary" variant="text">
+          <Button color="primary" variant="text" onClick={registerOnClick}>
             Sign Up
           </Button>
         </div>

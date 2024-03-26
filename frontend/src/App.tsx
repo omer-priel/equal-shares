@@ -7,7 +7,7 @@ import ForgotPasswordPage from './components/ForgotPasswordPage';
 import LoginPage from './components/LoginPage';
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
-import Footer from './components/Footer';
+import { Button } from '@mui/material';
 
 export default function App() {
 
@@ -20,19 +20,34 @@ export default function App() {
     setCurrentPage(Page.Register);
   }
 
+  const aboutLabel = aboutPageShowd ? 'חזור לדף' : 'עלינו';
+
   return (
     <div>
-      {aboutPageShowd ? <AboutPage /> : (<>
-        {user === null ? (
-        <>
-          {currentPage === Page.Register && (<RegisterPage setCurrentPage={setCurrentPage} />)}
-          {currentPage === Page.ForgotPassword && (<ForgotPasswordPage setCurrentPage={setCurrentPage} />)}
-          {currentPage === Page.Login && (<LoginPage setCurrentPage={setCurrentPage} setUser={setUser} />)}
-        </>) : (<>
-          {currentPage === Page.Main && (<MainPage logout={logout} user={user} />)}
-        </>)}
-      </>)}
-      <Footer aboutPageShowd={aboutPageShowd} setAboutPageShowd={setAboutPageShowd} />
+      <div className='h-[85dvh]'>
+        <div className='w-fit mx-auto'>
+          {aboutPageShowd ? <AboutPage /> : (<>
+            {user === null ? (
+            <>
+              {currentPage === Page.Register && (<RegisterPage setCurrentPage={setCurrentPage} />)}
+              {currentPage === Page.ForgotPassword && (<ForgotPasswordPage setCurrentPage={setCurrentPage} />)}
+              {currentPage === Page.Login && (<LoginPage setCurrentPage={setCurrentPage} setUser={setUser} />)}
+            </>) : (<>
+              {currentPage === Page.Main && (<MainPage logout={logout} user={user} />)}
+            </>)}
+          </>)}
+        </div>
+      </div>
+      <div className='w-full h-[15dvh] p-[10px] border border-[#DEE2E6] border-t-1'>
+        <div className='w-fit mx-auto'>
+          <Button color='inherit' variant='text' onClick={() => {setAboutPageShowd(!aboutPageShowd)}}>
+            {aboutLabel}
+          </Button>
+        </div>
+        <div className='w-fit mx-auto'>
+          © 2023 המעבדה לאלגוריתמים כלכליים
+        </div>
+      </div>
     </div>
   )
 }
