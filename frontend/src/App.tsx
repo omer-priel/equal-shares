@@ -25,7 +25,7 @@ export default function App() {
   return (
     <div>
       <div className='h-[85dvh]'>
-        <div className='w-fit mx-auto'>
+        <div className='w-fit mx-auto py-[10px]'>
           {aboutPageShowd ? <AboutPage /> : (<>
             {user === null ? (
             <>
